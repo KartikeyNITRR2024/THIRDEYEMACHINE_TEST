@@ -70,7 +70,7 @@ def get_stock_data(ticker_name, stock_id):
         logger.info(f"Successfully fetched data for {ticker_name} (ID: {stock_id}) from Yahoo Finance.")
 
         # Log CPU utilization during the request process
-        # log_cpu_utilization()
+        log_cpu_utilization()
 
         # Parse the response with BeautifulSoup
         soup = BeautifulSoup(response.text, "html.parser")
@@ -162,7 +162,7 @@ def main():
             else:
                 logger.warning("No stock data found.")
 
-            logger.info("****************************************************")
+            logger.info("Completed****************************************************")
 
             # Sleep for 30 seconds before fetching again
             stocks_data = []
@@ -172,6 +172,6 @@ def main():
 
 if __name__ == "__main__":
     # Monitor CPU utilization while running the program
-    # log_cpu_utilization()  # Initial log
+    log_cpu_utilization()  # Initial log
     main()
-    # log_cpu_utilization()  # Final log after completion
+    log_cpu_utilization()  # Final log after completion
