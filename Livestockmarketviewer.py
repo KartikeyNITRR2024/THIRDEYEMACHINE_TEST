@@ -162,6 +162,8 @@ def main():
             else:
                 logger.warning("No stock data found.")
 
+            logger.info("****************************************************")
+
             # Sleep for 30 seconds before fetching again
             stocks_data = []
             
