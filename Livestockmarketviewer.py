@@ -164,7 +164,6 @@ def main():
 
             # Sleep for 30 seconds before fetching again
             stocks_data = []
-            return
             
     except Exception as e:
         logger.error(f"Error occurred in main function: {e}")
